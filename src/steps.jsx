@@ -3,7 +3,8 @@ import "./index.css"
 
 function Steps(){
     //State should always be at the top of the component function 
-    //UseState (useState) can't be placed in lower functions or if else statements 
+    //UseState (useState) can't be placed in lower functions or if else statements
+    // Always update state with setState not manually
  const [step, setSteps] = useState(1)   
 const messages = [
   "Learn React ⚛️",

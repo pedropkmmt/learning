@@ -5,8 +5,10 @@ const [advice, setAdvice] = useState("")
 const [count, setCount] = useState(0)
 
     async function getAdvice(){
+        //How you call an api in react
         const res = await fetch('https://api.adviceslip.com/advice')
-        const data = await res.json();
+        const data = await res.json(); // converting it json
+        // using state to display the data of the api on the ui
         setAdvice(data.slip.advice)
         setCount((c) => c +1)
     }
