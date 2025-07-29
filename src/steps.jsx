@@ -5,7 +5,8 @@ function Steps(){
     //State should always be at the top of the component function 
     //UseState (useState) can't be placed in lower functions or if else statements
     // Always update state with setState not manually
- const [step, setSteps] = useState(1)   
+ const [step, setSteps] = useState(1)
+ const [display, setDisplay] = useState(true)   
 const messages = [
   "Learn React ⚛️",
   "Apply for jobs 💼",
@@ -25,6 +26,10 @@ function handleNext(){
 }
     return(
         <>
+        {/* learn this carefully  */}
+        <div onClick={() => setDisplay(!display)} className="close">&times;
+        </div>
+        {display &&
         <div className="steps">
             <div className="numbers">
                 <div className={step >= 1 ? 'active' : ""}>1</div>
@@ -39,6 +44,7 @@ function handleNext(){
             <button  onClick={ handleNext} style={{backgroundColor: " #7950f2", color:"white"}}>Next</button>
         </div>
         </div>
+}
             </>
     )
 }
