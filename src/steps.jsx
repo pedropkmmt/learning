@@ -2,6 +2,8 @@ import { use, useState } from "react";
 import "./index.css"
 
 function Steps(){
+    //State should always be at the top of the component function 
+    //UseState (useState) can't be placed in lower functions or if else statements 
  const [step, setSteps] = useState(1)   
 const messages = [
   "Learn React ⚛️",
@@ -24,9 +26,9 @@ function handleNext(){
         <>
         <div className="steps">
             <div className="numbers">
-                <div className={`${step >= 1 ? 'active' : ""}`}>1</div>
-                <div className={`${step >= 2 ? 'active' : ""}`} >2</div>
-                <div className={`${step >= 3 ? 'active' : ""}`}>3</div>
+                <div className={step >= 1 ? 'active' : ""}>1</div>
+                <div className={step >= 2 ? 'active' : ""} >2</div>
+                <div className={step >= 3 ? 'active' : ""}>3</div>
             </div>
         
         <p className="message">Step {step} {messages[step -1]}</p>
