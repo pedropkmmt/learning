@@ -4,6 +4,7 @@ import Steps from "./steps"
 import Counter from "./counter"
 import Add from "./counts"
 import Mirror from "./Mirror"
+import Hide from "./hide"
 function App() {
 // Props example
   return (
@@ -13,7 +14,8 @@ function App() {
     {/* <Steps/> */}
     {/* <Counter/> */}
     {/* <Add/> */}
-    <Mirror/>
+    {/* <Mirror/> */}
+    <Hide/>
     </>
    
   )
