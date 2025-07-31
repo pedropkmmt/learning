@@ -5,6 +5,7 @@ import Counter from "./counter"
 import Add from "./counts"
 import Mirror from "./Mirror"
 import Hide from "./hide"
+import TextToggle from "./text"
 function App() {
 // Props example
   return (
@@ -15,7 +16,8 @@ function App() {
     {/* <Counter/> */}
     {/* <Add/> */}
     {/* <Mirror/> */}
-    <Hide/>
+    {/* <Hide/> */}
+    <TextToggle/>
     </>
    
   )
